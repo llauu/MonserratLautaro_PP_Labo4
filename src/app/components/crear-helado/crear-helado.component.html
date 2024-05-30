@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="sabor">Sabor:</label>
+      <input id="sabor" formControlName="sabor">
+    </div>
+    <div>
+      <label for="tipo">Tipo:</label>
+      <select id="tipo" formControlName="tipo">
+        <option value="agua">Agua</option>
+        <option value="crema">Crema</option>
+      </select>
+    </div>
+    <div>
+      <label for="precio">Precio:</label>
+      <input id="precio" type="number" formControlName="precio">
+    </div>
+    <div>
+      <label for="peso">Peso (gramos):</label>
+      <input id="peso" type="number" formControlName="peso">
+    </div>
+    <button type="submit">Crear Helado</button>
+</form>
+  

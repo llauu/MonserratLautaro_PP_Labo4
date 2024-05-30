@@ -8,6 +8,7 @@ export const routes: Routes = [
     {path: 'register', loadComponent: () => import('./components/register/register.component').then(m => m.RegisterComponent)},
     {path: 'repartidores/alta', loadComponent: () => import('./components/alta-repartidor/alta-repartidor.component').then(m => m.AltaRepartidorComponent), canActivate: [authGuard] },
     {path: 'repartidores/listado', loadComponent: () => import('./components/listado-repartidores/listado-repartidores.component').then(m => m.ListadoRepartidoresComponent), canActivate: [authGuard] },
+    {path: 'helados', loadComponent: () => import('./components/helados/helados.component').then(m => m.HeladosComponent), canActivate: [authGuard] },
 
     // {path: 'ahorcado', loadComponent: () => import('./components/ahorcado/ahorcado.component').then(m => m.AhorcadoComponent)},
     // {path: 'mayor-o-menor', loadComponent: () => import('./components/mayor-o-menor/mayor-o-menor.component').then(m => m.MayorOMenorComponent)},

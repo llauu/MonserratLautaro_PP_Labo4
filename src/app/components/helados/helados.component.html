@@ -1,0 +1,32 @@
+
+<table class="table">
+    <thead >
+        <tr>
+            <th>Helados</th>
+            <th>Tipo</th>
+            <th>Peso</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let helado of helados" (click)="seleccionarHelado(helado)">
+            <td>{{ helado.sabor }}</td>
+            <td>{{ helado.tipo }}</td>
+            <td>{{ helado.peso }}</td>
+            <td>{{ helado.precio }}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="container d-flex justify-content-around mt-5">
+    <div class="jumbotron">
+      <h5>Crear helado</h5>
+      <app-crear-helado (heladoCreado)="onHeladoCreado($event)"></app-crear-helado>
+    </div>
+    <div class="jumbotron">
+        <h5>Borrar helado</h5>
+        <app-borrar-helado  [helado]="heladoSeleccionado" (heladoBorrado)="onHeladoBorrado($event)"></app-borrar-helado>
+    </div>
+</div>
+  
