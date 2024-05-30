@@ -1,0 +1,38 @@
+.card-header {
+    background-color: #E4E4E4;
+    border: none;
+}
+
+.login-container {
+    z-index: 1;
+    margin-top: 100px;
+}
+
+.google-icon {
+    width: 27px;
+    height: 27px;   
+    cursor: pointer;
+}
+
+.btn-login {
+    width: 80%;
+    font-weight: 900;
+    font-size: 21px;
+    background-color: #fc573a;
+    border: none;
+}
+
+.btn-login:hover {
+    background-color: #dc462c;
+    transition: all 0.2s;
+}
+
+.btn-reg {
+    width: 60%;
+    font-size: 16.5px;
+}
+
+.error-msg {
+    color: #ff0000;
+    position: absolute;   
+}

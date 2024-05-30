@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5 login-container">
+        <div class="card shadow mt-4">
+          <div class="card-header">
+            <h1 class="text-center my-3">Inicio de sesion</h1>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group mt-3">
+                <label for="email">Correo electronico</label>
+                <input type="email" [(ngModel)]="email" name="email" class="form-control" id="email" placeholder="Ingrese su correo electronico">
+              </div>
+              <div class="form-group mt-3">
+                <label for="password">Contraseña</label>
+                <input type="password" [(ngModel)]="pass" name="pass" class="form-control" id="pass" placeholder="Ingrese su contraseña">
+              </div>
+              
+              @if (errorMsg != '') {
+                <p class="error-msg">{{errorMsg}}</p>
+              }
+
+              <div class="d-flex justify-content-center mt-5">
+                <button type="submit" class="btn btn-primary btn-block btn-login" (click)="login()">Iniciar sesion</button>
+              </div>
+              <!-- <div class="text-center mb-3">
+                <button type="button" class="btn btn-link" (click)="fillInputs()">Acceso rapido</button>
+              </div> -->
+            </form>
+            <div class="border-bottom mt-4"></div>
+
+            <div class="d-flex justify-content-center mt-4 mb-1">
+              <button type="button" class="btn btn-secondary btn-reg" routerLink="../register">Crear cuenta nueva</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
