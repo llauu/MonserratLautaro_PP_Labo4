@@ -1,0 +1,26 @@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Repartidores</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let repartidor of repartidores" (click)="seleccionarRepartidor(repartidor)">
+            <td>{{ repartidor.nombre }}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="container d-flex justify-content-around mt-5">
+    <div class="jumbotron">
+      <h5>Detalle repartidor</h5>
+      <app-detalle-repartidor [repartidor]="repartidorSeleccionado"></app-detalle-repartidor>
+    </div>
+    <div class="jumbotron">
+      <h5>Detalle pais</h5>
+      <app-detalle-pais [pais]="paisSeleccionado"></app-detalle-pais>
+    </div>
+</div>
+  

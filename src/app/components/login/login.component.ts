@@ -72,19 +72,34 @@ export class LoginComponent {
   // }
   
 
-  // fillInputs() {
-  //   const emailInput = document.getElementById('email') as HTMLInputElement;
-  //   if (emailInput) {
-  //     emailInput.value = 'prueba@mail.com';
-  //     this.email = 'prueba@mail.com';
-  //   }
+  fillInputsUser() {
+    const emailInput = document.getElementById('email') as HTMLInputElement;
+    if (emailInput) {
+      emailInput.value = 'empleado@mail.com';
+      this.email = 'empleado@mail.com';
+    }
     
-  //   const passInput = document.getElementById('pass') as HTMLInputElement;
-  //   if (passInput) {
-  //     passInput.value = '123456';
-  //     this.pass = '123456';
-  //   }
-  // }
+    const passInput = document.getElementById('pass') as HTMLInputElement;
+    if (passInput) {
+      passInput.value = '123456';
+      this.pass = '123456';
+    }
+  }
+
+  
+  fillInputsAdmin() {
+    const emailInput = document.getElementById('email') as HTMLInputElement;
+    if (emailInput) {
+      emailInput.value = 'admin@mail.com';
+      this.email = 'admin@mail.com';
+    }
+    
+    const passInput = document.getElementById('pass') as HTMLInputElement;
+    if (passInput) {
+      passInput.value = '123456';
+      this.pass = '123456';
+    }
+  }
 
   // GetData() {
   //   let col = collection(this.firestore, 'logins');

@@ -28,8 +28,8 @@ export class RegisterComponent {
       this.authService.register(this.newEmail, this.newPass)
       .then(res => {
         if(res.user.email !== null) {
-          let col = collection(this.firestore, 'logins');
-          addDoc(col, {'date': new Date(), 'user': this.newEmail});
+          let col = collection(this.firestore, 'roles');
+          addDoc(col, {'user': this.newEmail, 'rol': 'empleado'});
 
           this.router.navigate(['/home']);
         }

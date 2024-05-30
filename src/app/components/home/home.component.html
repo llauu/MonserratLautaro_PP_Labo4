@@ -1,3 +1,13 @@
-<h1>    
-    HOME
-</h1>
+<div>
+    <h1 >   
+        Bienvenida
+    </h1>
+    
+    @if(data) {
+        <div>
+            <img src="{{data.avatar_url}}" alt="Mi foto">
+            <p><strong>Nombre:</strong> {{data.name}}</p>
+            <p><strong>Usuario:</strong> {{data.login}}</p>
+        </div>
+    }
+</div>

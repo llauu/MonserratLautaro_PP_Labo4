@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  api: string = 'https://api.github.com/users/llauu';
+  data: any;
 
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.http.get(this.api).subscribe(res => {
+      this.data = res;
+    })
+  }
 }

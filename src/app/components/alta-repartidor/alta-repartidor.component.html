@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-center align-items-center cont-alta">
+    <div class="w-25 d-flex">
+        <form [formGroup]="form" (ngSubmit)="altaRepartidor()">
+            <div class="form-group">    
+                <label for="nombre">Nombre:</label>
+                <input type="text" formControlName="nombre" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">    
+                <label for="dni">DNI:</label>
+                <input type="number" formControlName="dni" class="form-control" id="dni" name="dni" required>
+                <small class="text-danger">
+                    {{dniControl?.getError('dniExiste')}}
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" formControlName="edad" class="form-control" id="edad" name="edad" required>
+            </div>
+            <div class="form-group">
+                <label for="cap_transporte">Capacidad de transporte:</label>
+                <input type="number" formControlName="cap_transporte" class="form-control" id="cap_transporte" name="cap_transporte" required>
+            </div>
+            <div class="form-group">
+                <label for="pais_origen">Pais de origen:</label>
+                <input type="text" readonly formControlName="pais_origen" class="form-control" id="pais_origen" name="pais_origen" required>
+            </div>
+            <div class="form-">
+                <label for="unidad_propia">Unidad propia:</label>
+                <input type="checkbox" class="ms-3" id="unidad_propia" name="unidad_propia" required>
+            </div>
+            
+
+            <button [disabled]="form.invalid" type="submit" class="btn btn-primary mt-4">Dar de alta</button>
+        </form>
+
+        <div>
+            <app-listado-paises (paisSeleccionado)="actualizarPais($event)"></app-listado-paises>
+        </div>
+    </div>
+</div>
+
